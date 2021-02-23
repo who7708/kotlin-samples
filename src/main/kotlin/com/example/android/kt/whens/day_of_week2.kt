@@ -9,9 +9,9 @@ fun main() {
 
     val dayOfWeek = 5
 
-    when (dayOfWeek){
-        1,2,3,4,5 -> println("weekday")
-        6,7 -> println("weekend")
+    when (dayOfWeek) {
+        1, 2, 3, 4, 5 -> println("weekday")
+        6, 7 -> println("weekend")
         else -> println("wrong value")
     }
 }

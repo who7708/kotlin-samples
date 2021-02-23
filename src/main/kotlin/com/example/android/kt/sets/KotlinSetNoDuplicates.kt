@@ -8,5 +8,5 @@ package com.example.android.kt.sets
 fun main() {
 
     val words2 = setOf("pen", "cup", "dog", "pen", "spectacles")
-    words2.forEach { e -> println(e)}
+    words2.forEach { e -> println(e) }
 }

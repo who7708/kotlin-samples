@@ -7,9 +7,9 @@ package com.example.android.kt.controlflow
  */
 fun main() {
 
-    var i:Int = 0
+    var i: Int = 0
 
-    while(i < 10) {
+    while (i < 10) {
 
         i++
         println("i is $i")

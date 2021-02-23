@@ -12,11 +12,11 @@ sealed class ShapeB {
 }
 
 fun getArea(e: ShapeB) =
-        when (e) {
-            is ShapeB.CircleB -> println("Circle area is ${Math.PI * e.radius * e.radius}")
-            is ShapeB.SquareB -> println("Square area is ${e.width * e.width}")
-            is ShapeB.RectangleB -> println("Rectangle area is ${e.width * e.height}")
-        }
+    when (e) {
+        is ShapeB.CircleB -> println("Circle area is ${Math.PI * e.radius * e.radius}")
+        is ShapeB.SquareB -> println("Square area is ${e.width * e.width}")
+        is ShapeB.RectangleB -> println("Rectangle area is ${e.width * e.height}")
+    }
 
 fun main() {
 

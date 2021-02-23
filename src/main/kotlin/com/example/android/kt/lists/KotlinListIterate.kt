@@ -7,8 +7,10 @@ package com.example.android.kt.lists
  */
 fun main() {
 
-    val words = listOf("pen", "cup", "dog", "person",
-        "cement", "coal", "spectacles")
+    val words = listOf(
+        "pen", "cup", "dog", "person",
+        "cement", "coal", "spectacles"
+    )
 
     words.forEach { e -> print("$e ") }
     println()
@@ -27,7 +29,7 @@ fun main() {
 
     println()
 
-    words.forEachIndexed({i, e -> println("words[$i] = $e")})
+    words.forEachIndexed({ i, e -> println("words[$i] = $e") })
 
     val it: ListIterator<String> = words.listIterator()
 

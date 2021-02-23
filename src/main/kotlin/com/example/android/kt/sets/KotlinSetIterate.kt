@@ -7,8 +7,10 @@ package com.example.android.kt.sets
  */
 fun main() {
 
-    val words = setOf("pen", "cup", "dog", "person",
-        "cement", "coal", "spectacles")
+    val words = setOf(
+        "pen", "cup", "dog", "person",
+        "cement", "coal", "spectacles"
+    )
 
     words.forEach { e -> print("$e ") }
     println()
@@ -27,7 +29,7 @@ fun main() {
 
     println()
 
-    words.forEachIndexed({i, e -> println("$i - $e")})
+    words.forEachIndexed({ i, e -> println("$i - $e") })
 
     val it: Iterator<String> = words.asIterable().iterator()
 

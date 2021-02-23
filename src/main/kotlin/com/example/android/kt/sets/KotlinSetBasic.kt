@@ -10,8 +10,8 @@ fun main() {
     val nums = setOf(11, 5, 3, 8, 1, 9, 6, 2)
 
     val len = nums.count()
-    val max = nums.max()
-    val min = nums.min()
+    val max = nums.maxOrNull()
+    val min = nums.minOrNull()
     val sum = nums.sum()
     val avg = nums.average()
 

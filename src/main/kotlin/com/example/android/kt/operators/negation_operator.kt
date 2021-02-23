@@ -7,7 +7,7 @@ package com.example.android.kt.operators
  */
 fun main() {
 
-    println(! true)
-    println(! false)
-    println(! (4 < 3))
+    println(!true)
+    println(!false)
+    println(!(4 < 3))
 }

@@ -11,11 +11,11 @@ class SquareA(var width: Int) : ShapeA()
 class RectangleA(var width: Int, var height: Int) : ShapeA()
 
 fun getArea(e: ShapeA) =
-        when (e) {
-            is CircleA -> println("Circle area is ${Math.PI * e.radius * e.radius}")
-            is SquareA -> println("Square area is ${e.width * e.width}")
-            is RectangleA -> println("Rectangle area is ${e.width * e.height}")
-        }
+    when (e) {
+        is CircleA -> println("Circle area is ${Math.PI * e.radius * e.radius}")
+        is SquareA -> println("Square area is ${e.width * e.width}")
+        is RectangleA -> println("Rectangle area is ${e.width * e.height}")
+    }
 
 fun main() {
 

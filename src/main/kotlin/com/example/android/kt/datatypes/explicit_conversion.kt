@@ -7,8 +7,8 @@ package com.example.android.kt.datatypes
  */
 fun main() {
 
-    val x:Long = 23_334
-    val y:Int = x.toInt()
+    val x: Long = 23_334
+    val y: Int = x.toInt()
 
     println(x)
     println(y)

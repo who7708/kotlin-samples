@@ -7,9 +7,11 @@ package com.example.android.kt.strings
  */
 fun main() {
 
-    val words = listOf("tank", "boy", "tourist", "ten",
+    val words = listOf(
+        "tank", "boy", "tourist", "ten",
         "pen", "car", "marble", "sonnet", "pleasant",
-        "ink", "atom")
+        "ink", "atom"
+    )
 
     val res = words.filter { e -> startWithT(e) }
     println(res)

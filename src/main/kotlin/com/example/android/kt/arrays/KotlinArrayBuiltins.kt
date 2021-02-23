@@ -18,9 +18,11 @@ fun main() {
     val sumOfValues = nums.sum()
     println("The sum of values is $sumOfValues")
 
-    val maxValue = nums.max()
+    // val maxValue = nums.max()
+    val maxValue = nums.maxOrNull()
     println("The maximum is $maxValue")
 
-    val minValue = nums.min()
+    // val minValue = nums.min()
+    val minValue = nums.minOrNull()
     println("The minimum is $minValue")
 }

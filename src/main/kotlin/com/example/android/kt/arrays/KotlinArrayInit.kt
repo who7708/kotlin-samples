@@ -5,7 +5,7 @@ package com.example.android.kt.arrays
  * @version 1.0.0
  * @since 2021/02/23
  */
-import java.util.Arrays
+import java.util.*
 
 fun main() {
 
@@ -15,6 +15,6 @@ fun main() {
     val nums2 = (3..12).toList().toTypedArray()
     println(Arrays.toString(nums2))
 
-    val nums3 = IntArray(5, { i -> i * 2 + 3})
+    val nums3 = IntArray(5, { i -> i * 2 + 3 })
     println(Arrays.toString(nums3))
 }

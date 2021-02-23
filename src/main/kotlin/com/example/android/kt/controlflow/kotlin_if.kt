@@ -13,7 +13,7 @@ fun main() {
 
     if (s_age!!.isEmpty()) return
 
-    val age:Int = s_age.toInt()
+    val age: Int = s_age.toInt()
 
     if (age > 18) {
 

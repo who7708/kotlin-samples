@@ -13,7 +13,7 @@ fun main() {
     if (s1 == s2) {
 
         println("Strings are equal")
-    }  else {
+    } else {
 
         println("Strings are not equal")
     }
@@ -25,7 +25,7 @@ fun main() {
     if (res == 0) {
 
         println("Strings are equal")
-    }  else {
+    } else {
 
         println("Strings are not equal")
     }

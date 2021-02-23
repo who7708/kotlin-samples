@@ -14,9 +14,11 @@ class City(private var name: String, private var population: Int) {
 
 fun main() {
 
-    val cities = listOf(City("Bratislava", 432000),
+    val cities = listOf(
+        City("Bratislava", 432000),
         City("Budapest", 1759000),
-        City("Prague", 1280000))
+        City("Prague", 1280000)
+    )
 
     cities.forEach { e -> println(e) }
 }

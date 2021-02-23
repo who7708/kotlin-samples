@@ -7,8 +7,10 @@ package com.example.android.kt.regularexpressions
  */
 fun main() {
 
-    val words = listOf("seven", "even", "prevent", "revenge", "maven",
-        "eleven", "amen", "event")
+    val words = listOf(
+        "seven", "even", "prevent", "revenge", "maven",
+        "eleven", "amen", "event"
+    )
 
     val pattern = ".?even".toRegex()
 

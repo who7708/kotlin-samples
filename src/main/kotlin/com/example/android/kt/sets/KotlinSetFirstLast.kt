@@ -7,8 +7,10 @@ package com.example.android.kt.sets
  */
 fun main() {
 
-    val words = setOf("pen", "cup", "dog", "person",
-        "cement", "coal", "donkey", "spectacles")
+    val words = setOf(
+        "pen", "cup", "dog", "person",
+        "cement", "coal", "donkey", "spectacles"
+    )
 
     val w1 = words.first()
     println(w1)

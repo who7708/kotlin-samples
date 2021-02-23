@@ -14,13 +14,14 @@ fun main() {
 
     var bytes: ByteArray = file.readBytes()
 
-    bytes.forEachIndexed { i, byte -> (
-            if (i == 0) {
-                print("${byte} ")
-            } else if (i % 10 == 0) {
-                print("${byte} \n")
-            } else {
-                print("${byte} ")
-            })
+    bytes.forEachIndexed { i, byte ->
+        (
+                if (i == 0) {
+                    print("${byte} ")
+                } else if (i % 10 == 0) {
+                    print("${byte} \n")
+                } else {
+                    print("${byte} ")
+                })
     }
 }

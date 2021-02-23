@@ -11,6 +11,6 @@ fun main() {
 
     val cash = 550
 
-    val res = expenses.fold(cash) {total, next -> total - next}
+    val res = expenses.fold(cash) { total, next -> total - next }
     println(res)
 }

@@ -7,9 +7,11 @@ package com.example.android.kt.regularexpressions
  */
 fun main() {
 
-    val sentences = listOf("I am looking for Jane.",
+    val sentences = listOf(
+        "I am looking for Jane.",
         "Jane was walking along the river.",
-        "Kate and Jane are close friends.")
+        "Kate and Jane are close friends."
+    )
 
     val pattern = "^Jane".toRegex()
 

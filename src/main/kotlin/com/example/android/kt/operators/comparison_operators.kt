@@ -7,8 +7,8 @@ package com.example.android.kt.operators
  */
 fun main() {
 
-    println(3 < 4);
-    println(3 == 4);
-    println(4 >= 3);
-    println(4 != 3);
+    println(3 < 4)
+    println(3 == 4)
+    println(4 >= 3)
+    println(4 != 3)
 }

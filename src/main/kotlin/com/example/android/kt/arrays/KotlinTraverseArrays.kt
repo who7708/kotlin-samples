@@ -13,7 +13,7 @@ fun main() {
 
     println()
 
-    nums.forEachIndexed({i, e -> println("nums[$i] = $e")})
+    nums.forEachIndexed({ i, e -> println("nums[$i] = $e") })
 
     for (e in nums) {
         print("$e ")

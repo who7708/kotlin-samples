@@ -20,5 +20,5 @@ fun main() {
 
     println()
 
-    phrase.forEachIndexed { idx, e -> println("phrase[$idx]=$e ")  }
+    phrase.forEachIndexed { idx, e -> println("phrase[$idx]=$e ") }
 }

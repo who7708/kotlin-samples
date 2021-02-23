@@ -14,7 +14,7 @@ fun main() {
 
     for (word in words) {
 
-        val n = word!!.length
+        val n = word.length
         nOfChars += n
     }
 

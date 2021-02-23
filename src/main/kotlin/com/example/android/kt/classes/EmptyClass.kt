@@ -5,7 +5,7 @@ package com.example.android.kt.classes
  * @version 1.0.0
  * @since 2021/02/23
  */
-class Being {}
+class Being
 class Empty
 
 fun main() {

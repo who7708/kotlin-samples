@@ -15,7 +15,7 @@ fun main() {
     println(u.name)
     println(u.email)
 
-    val (name, email) = u;
+    val (name, email) = u
     println("$name $email")
 
     val u2 = UserA("Peter Novak", "pnovak47@gmail.com")

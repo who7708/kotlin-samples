@@ -18,7 +18,7 @@ fun power(a: Int, b: Int = 2): Int {
         value *= a
     }
 
-    return value;
+    return value
 }
 
 fun main() {

@@ -7,8 +7,10 @@ package com.example.android.kt.lists
  */
 fun main() {
 
-    val words = listOf("pen", "cup", "dog", "person",
-        "cement", "coal", "spectacles")
+    val words = listOf(
+        "pen", "cup", "dog", "person",
+        "cement", "coal", "spectacles"
+    )
 
     val w1 = words.first()
     println(w1)

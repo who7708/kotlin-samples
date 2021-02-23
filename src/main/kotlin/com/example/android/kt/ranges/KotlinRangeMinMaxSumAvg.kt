@@ -9,8 +9,8 @@ fun main() {
 
     val r = (1..10)
 
-    println(r.min())
-    println(r.max())
+    println(r.minOrNull())
+    println(r.maxOrNull())
     println(r.sum())
     println(r.average())
 }

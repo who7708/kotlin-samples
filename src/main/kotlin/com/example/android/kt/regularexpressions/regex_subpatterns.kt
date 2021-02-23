@@ -7,8 +7,10 @@ package com.example.android.kt.regularexpressions
  */
 fun main() {
 
-    val words = listOf("book", "bookshelf", "bookworm",
-        "bookcase", "bookish", "bookkeeper", "booklet", "bookmark")
+    val words = listOf(
+        "book", "bookshelf", "bookworm",
+        "bookcase", "bookish", "bookkeeper", "booklet", "bookmark"
+    )
 
     val pattern = "book(worm|mark|keeper)?".toRegex()
 

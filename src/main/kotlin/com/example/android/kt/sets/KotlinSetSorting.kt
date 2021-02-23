@@ -18,8 +18,10 @@ fun main() {
     val revNums = nums.reversed()
     println(revNums)
 
-    val cars = setOf(Car("Mazda", 6300), Car("Toyota", 12400),
-        Car("Skoda", 5670), Car("Mercedes", 18600))
+    val cars = setOf(
+        Car("Mazda", 6300), Car("Toyota", 12400),
+        Car("Skoda", 5670), Car("Mercedes", 18600)
+    )
 
     val res = cars.sortedBy { car -> car.name }
     res.forEach { e -> println(e) }

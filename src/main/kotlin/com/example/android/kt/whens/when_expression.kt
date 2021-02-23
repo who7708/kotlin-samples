@@ -12,7 +12,7 @@ fun main() {
 
     val dayOfWeek: DayOfWeek = LocalDate.now().dayOfWeek
 
-    val msg:String = when (dayOfWeek) {
+    val msg: String = when (dayOfWeek) {
         DayOfWeek.MONDAY -> "It is monday"
         DayOfWeek.TUESDAY -> "It is tuesday"
         DayOfWeek.WEDNESDAY -> "It is tuesday"

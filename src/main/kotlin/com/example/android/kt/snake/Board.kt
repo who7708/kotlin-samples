@@ -116,8 +116,9 @@ class Board : JPanel(), ActionListener {
         val fontMetrics = getFontMetrics(small)
 
         val rh = RenderingHints(
-                RenderingHints.KEY_ANTIALIASING,
-                RenderingHints.VALUE_ANTIALIAS_ON)
+            RenderingHints.KEY_ANTIALIASING,
+            RenderingHints.VALUE_ANTIALIAS_ON
+        )
 
         rh[RenderingHints.KEY_RENDERING] = RenderingHints.VALUE_RENDER_QUALITY
 

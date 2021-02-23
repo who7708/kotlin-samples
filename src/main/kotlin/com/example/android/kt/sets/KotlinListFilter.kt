@@ -7,8 +7,10 @@ package com.example.android.kt.sets
  */
 fun main(args: Array<String>) {
 
-    val words = setOf("pen", "cup", "dog", "person",
-        "cement", "coal", "spectacles")
+    val words = setOf(
+        "pen", "cup", "dog", "person",
+        "cement", "coal", "spectacles"
+    )
 
     val words2 = words.filter { e -> e.length == 3 }
     words2.forEach { e -> print("$e ") }
@@ -21,8 +23,10 @@ fun main(args: Array<String>) {
 
     println()
 
-    val cars = setOf(Car("Mazda", 6300), Car("Toyota", 12400),
-        Car("Skoda", 5670), Car("Mercedes", 18600))
+    val cars = setOf(
+        Car("Mazda", 6300), Car("Toyota", 12400),
+        Car("Skoda", 5670), Car("Mercedes", 18600)
+    )
 
     val res = cars.filter { car -> car.price > 10000 }
     res.forEach { e -> println(e) }
