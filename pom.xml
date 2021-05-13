@@ -17,7 +17,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <kotlin.version>1.4.30</kotlin.version>
+        <kotlin.version>1.5.0</kotlin.version>
     </properties>
 
     <dependencies>
@@ -65,8 +65,8 @@
                         </goals>
                         <configuration>
                             <sourceDirs>
-                                <source>src/main/java</source>
-                                <source>src/main/kotlin</source>
+                                <source>${project.basedir}/src/main/java</source>
+                                <source>${project.basedir}/src/main/kotlin</source>
                             </sourceDirs>
                         </configuration>
                     </execution>
@@ -76,6 +76,12 @@
                         <goals>
                             <goal>test-compile</goal>
                         </goals>
+                        <configuration>
+                            <sourceDirs>
+                                <source>${project.basedir}/src/test/java</source>
+                                <source>${project.basedir}/src/test/kotlin</source>
+                            </sourceDirs>
+                        </configuration>
                     </execution>
                 </executions>
                 <configuration>
