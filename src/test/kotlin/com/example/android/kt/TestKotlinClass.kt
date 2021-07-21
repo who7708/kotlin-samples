@@ -15,6 +15,15 @@ import kotlin.concurrent.withLock
 class TestKotlinClass {
 
     @Test
+    fun test3() {
+        val student = Student()
+        student.id = 123
+        student.age = 1
+        student.name = "Chris"
+        println(student)
+    }
+
+    @Test
     fun test1() {
         // 使用 ReentrantReadWriteLock
         val reentrantReadWriteLock = ReentrantReadWriteLock()
