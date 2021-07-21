@@ -33,3 +33,5 @@ build/
 .vscode/
 
 libs
+
+tree.txt
