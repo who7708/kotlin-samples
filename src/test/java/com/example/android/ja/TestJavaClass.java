@@ -3,9 +3,11 @@ package com.example.android.ja;
 import com.example.android.kt.Foo;
 
 /**
+ * Created on 2021/07/28
+ *
  * @author Chris
  * @version 1.0.0
- * @date 2021/05/14
+ * @since 1.0.0
  */
 public class TestJavaClass {
     public static void main(String[] args) {
