@@ -16,6 +16,7 @@ public class TestJavaClass {
         }
 
         System.out.println(Foo.answer);
+        System.out.println(Foo.answer);
 
         Foo.sayHello();
     }
