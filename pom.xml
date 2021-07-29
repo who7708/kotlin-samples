@@ -47,11 +47,18 @@
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlinx</groupId>
-            <artifactId>kotlinx-coroutines-core</artifactId>
-            <!--<artifactId>kotlinx-coroutines-core-jvm</artifactId>-->
+            <!--<artifactId>kotlinx-coroutines-core</artifactId>-->
+            <artifactId>kotlinx-coroutines-core-jvm</artifactId>
             <version>${kotlinx.version}</version>
             <!--<type>pom</type>-->
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlinx</groupId>
+            <artifactId>kotlinx-coroutines-test</artifactId>
+            <version>${kotlinx.version}</version>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.jetbrains.kotlinx</groupId>
             <artifactId>kotlinx-coroutines-rx2</artifactId>
