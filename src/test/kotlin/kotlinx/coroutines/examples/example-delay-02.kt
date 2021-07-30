@@ -5,26 +5,30 @@
 // This file was automatically generated from Delay.kt by Knit tool. Do not edit.
 package kotlinx.coroutines.examples.exampleDelay02
 
-import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.debounce
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.toList
+import kotlinx.coroutines.runBlocking
 
 fun main() = runBlocking {
 
-flow {
-    emit(1)
-    delay(90)
-    emit(2)
-    delay(90)
-    emit(3)
-    delay(1010)
-    emit(4)
-    delay(1010)
-    emit(5)
-}.debounce {
-    if (it == 1) {
-        0L
-    } else {
-        1000L
+    flow {
+        emit(1)
+        delay(90)
+        emit(2)
+        delay(90)
+        emit(3)
+        delay(1010)
+        emit(4)
+        delay(1010)
+        emit(5)
+    }.debounce {
+        if (it == 1) {
+            0L
+        } else {
+            1000L
+        }
     }
+        .toList().joinToString().let { println(it) }
 }
-.toList().joinToString().let { println(it) } }

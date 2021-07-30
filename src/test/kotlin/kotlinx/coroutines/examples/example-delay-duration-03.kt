@@ -6,16 +6,21 @@
 // This file was automatically generated from Delay.kt by Knit tool. Do not edit.
 package kotlinx.coroutines.examples.exampleDelayDuration03
 
-import kotlin.time.*
-import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.sample
+import kotlinx.coroutines.flow.toList
+import kotlinx.coroutines.runBlocking
+import kotlin.time.Duration
+import kotlin.time.ExperimentalTime
 
 fun main() = runBlocking {
 
-flow {
-    repeat(10) {
-        emit(it)
-        delay(110.milliseconds)
-    }
-}.sample(200.milliseconds)
-.toList().joinToString().let { println(it) } }
+    flow {
+        repeat(10) {
+            emit(it)
+            delay(Duration.milliseconds(110))
+        }
+    }.sample(Duration.milliseconds(200))
+        .toList().joinToString().let { println(it) }
+}

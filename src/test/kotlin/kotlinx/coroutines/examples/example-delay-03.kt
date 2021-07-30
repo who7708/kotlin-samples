@@ -5,15 +5,19 @@
 // This file was automatically generated from Delay.kt by Knit tool. Do not edit.
 package kotlinx.coroutines.examples.exampleDelay03
 
-import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.sample
+import kotlinx.coroutines.flow.toList
+import kotlinx.coroutines.runBlocking
 
 fun main() = runBlocking {
 
-flow {
-    repeat(10) {
-        emit(it)
-        delay(110)
-    }
-}.sample(200)
-.toList().joinToString().let { println(it) } }
+    flow {
+        repeat(10) {
+            emit(it)
+            delay(110)
+        }
+    }.sample(200)
+        .toList().joinToString().let { println(it) }
+}

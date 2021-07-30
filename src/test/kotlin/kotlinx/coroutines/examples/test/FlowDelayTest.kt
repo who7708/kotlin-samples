@@ -6,7 +6,7 @@
 // package kotlinx.coroutines.examples.test
 //
 // import kotlinx.coroutines.knit.*
-// import org.junit.Test
+// import org.junit.jupiter.api.Test
 //
 // class FlowDelayTest {
 //     @Test
