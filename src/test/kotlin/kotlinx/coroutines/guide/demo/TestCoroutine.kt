@@ -1,7 +1,10 @@
 package kotlinx.coroutines.guide.demo
 
+import com.google.gson.GsonBuilder
+import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -49,7 +52,7 @@ class TestCoroutine {
             runBlocking {
                 for (i in 1..100) {
                     launch(Dispatchers.IO) {
-                        val result = random(atomicLong)
+                        val result = random()
                         list.add(result)
                     }
                 }
@@ -60,10 +63,9 @@ class TestCoroutine {
         println(list.sum())
     }
 
-    private suspend fun random(atomicLong: AtomicLong = AtomicLong(0)): Long {
+    private suspend fun random(): Long {
         val random = (1000L..5000).random()
         println("${Thread.currentThread()}")
-        atomicLong.addAndGet(random)
         delay(random)
         return random
     }
@@ -87,4 +89,86 @@ class TestCoroutine {
         return@withContext random()
     }
 
+    /**
+     * 测试异步协程
+     */
+    @Test
+    fun testAsync() {
+        val gson = GsonBuilder().setPrettyPrinting().create()
+        // 统计时间
+        val time = measureTimeMillis {
+            // 阻塞线程，直到所有协程全部执行完成
+            val result = runBlocking(Dispatchers.IO) {
+                val list = arrayListOf<Deferred<TestObj>>()
+                for (i in 1..10) {
+                    // 异步请求
+                    val asyncResult = async {
+                        var random = 0L
+                        return@async runCatching {
+                            // 发送请求
+                            random = request()
+                            TestObj().apply { id = random; msg = "SUCCESS" }
+                        }.getOrElse { ex ->
+                            TestObj().apply { id = random; msg = ex.message }
+                        }
+                    }
+                    list.add(asyncResult)
+                }
+                println("wait for the result...")
+                list.map { it.await() }.toList()
+            }
+            // println(JSON.toJSONString(result, true))
+            println(gson.toJson(result))
+        }
+        println()
+        println("finish $time ms")
+    }
+
+    /**
+     * 测试同步协程
+     */
+    @Test
+    fun testLaunch() {
+        val gson = GsonBuilder().setPrettyPrinting().create()
+        // 统计时间
+        val time = measureTimeMillis {
+            // 阻塞线程，直到所有协程全部执行完成
+            // val result = runBlocking(Dispatchers.IO) {
+            val result = runBlocking {
+                val list = arrayListOf<TestObj>()
+                for (i in 1..10) {
+                    // 由于使用了 Dispathcers 线程池，所以会一直new线程做处理。
+                    // 如果不使用 Dispatchers ，则会在当前线程 main 新建一个协程进行处理
+                    // 两个均是异步
+                    launch {
+                        var random = 0L
+                        val result = runCatching {
+                            // 发送请求
+                            random = request()
+                            TestObj().apply { id = random; msg = "SUCCESS" }
+                        }.getOrElse { ex ->
+                            TestObj().apply { id = random; msg = ex.message }
+                        }
+                        list.add(result)
+                    }
+                }
+                return@runBlocking list
+            }
+            // println(JSON.toJSONString(result, true))
+            println(gson.toJson(result))
+        }
+        println("finish $time ms")
+    }
+
+    /**
+     * 模拟耗时请求
+     */
+    private suspend fun request(): Long {
+        val random = (1000L..5000).random()
+        println("$random, ${Thread.currentThread().name}")
+        delay(random)
+        // 模拟请求报错
+        if (random.mod(3) == 0) throw ArithmeticException("算术异常")
+        return random
+    }
 }
