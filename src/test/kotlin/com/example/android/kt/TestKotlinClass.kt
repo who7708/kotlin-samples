@@ -1,6 +1,6 @@
 package com.example.android.kt
 
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import java.util.concurrent.locks.ReentrantLock
 import java.util.concurrent.locks.ReentrantReadWriteLock
 import kotlin.concurrent.read

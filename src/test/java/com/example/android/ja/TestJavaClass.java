@@ -15,6 +15,8 @@ public class TestJavaClass {
             System.out.println("hello world");
         }
 
+        int a = 1 / 0;
+
         System.out.println(Foo.answer);
         System.out.println(Foo.answer);
 
