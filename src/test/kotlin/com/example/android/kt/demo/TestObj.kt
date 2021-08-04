@@ -1,4 +1,4 @@
-package kotlinx.coroutines.guide.demo
+package com.example.android.kt.demo
 
 class TestObj {
     var id: Long? = null

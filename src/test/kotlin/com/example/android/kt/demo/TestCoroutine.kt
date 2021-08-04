@@ -1,4 +1,4 @@
-package kotlinx.coroutines.guide.demo
+package com.example.android.kt.demo
 
 import com.google.gson.GsonBuilder
 import kotlinx.coroutines.Deferred

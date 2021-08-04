@@ -5,10 +5,13 @@
 // This file was automatically generated from exception-handling.md by Knit tool. Do not edit.
 package kotlinx.coroutines.guide.exampleExceptions05
 
-import kotlinx.coroutines.exceptions.*
-
-import kotlinx.coroutines.*
-import java.io.*
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import java.io.IOException
 
 @OptIn(DelicateCoroutinesApi::class)
 fun main() = runBlocking {
@@ -29,5 +32,5 @@ fun main() = runBlocking {
         }
         delay(Long.MAX_VALUE)
     }
-    job.join()  
+    job.join()
 }
